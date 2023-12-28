@@ -1,66 +1,31 @@
-## Foundry
+# Eoracle Solidity Home Assignment
+This explains the home assignement focuses on Solidity
+You will be checked on claritiy of the code, storage selection, unit tests, security of the smart contracts and gas effiencency
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## The address of the contract on mumbai testnet: 0x46e938E0963D8201E501F5efECB80306940E325a
 
-Foundry consists of:
+# Requirements
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+Install the dependencies
+```bash
+npm i
 ```
 
-### Test
+Modify the .env file with your private key and infura key and etc.
 
-```shell
-$ forge test
+# How to run the tests
+```bash
+
+npx hardhat test --network hardhat
+
 ```
 
-### Format
-
-```shell
-$ forge fmt
+# How to deploy the contracts
+```bash
+npx hardhat run scripts/deploy.ts --network mumbai
 ```
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+# How to verify the contracts
+```bash
+npx hardhat run scripts/deploy.ts --network mumbai
 ```
